@@ -24,17 +24,6 @@ public:
         }
         }
       
-      
-        /*
-        vect.push_back(vect[counter]*2+1);
-        vect.push_back(vect[counter]*3+1);
-        counter += 1;
-        
-        it = unique(vect.begin(),vect.end());
-        vect.resize(distance(vect.begin(), it));
-        sort(vect.begin(),vect.end());
-      }
-      */
       return vect[n];
     };
 };
