@@ -1,0 +1,40 @@
+#include <vector>
+using namespace std;
+class DoubleLinear
+{
+public:
+    
+    static int dblLinear(int n){
+      vector<int> vect{};
+      vect.push_back(1);
+      int x{0};
+      int y{0};
+      for(int i{0};i<n;i++){
+        int nextX = vect[x]*2+1;
+        int nextY = vect[y]*3+1;
+        if(nextX <= nextY){
+          vect.push_back(nextX);
+          x++;
+          if(nextX == nextY){
+            y++;
+          }
+        } else{
+          vect.push_back(nextY);
+          y++;
+        }
+        }
+      
+      
+        /*
+        vect.push_back(vect[counter]*2+1);
+        vect.push_back(vect[counter]*3+1);
+        counter += 1;
+        
+        it = unique(vect.begin(),vect.end());
+        vect.resize(distance(vect.begin(), it));
+        sort(vect.begin(),vect.end());
+      }
+      */
+      return vect[n];
+    };
+};
